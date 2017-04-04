@@ -1,0 +1,59 @@
+body{
+  background-color: #ece1cb;
+  display: inline-block;
+}
+header{
+  margin-top: 0;
+}
+h1{
+  /*border-style: dashed;*/
+  color: #614936;
+  display: inline-block;
+  font-family: 'Bilbo', cursive;
+  font-size: 10em;
+  font-weight: lighter;
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0;
+}
+h2{
+  /*border-style: dashed;*/
+  color: #614936;
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 8em;
+  font-weight: lighter;
+  display: block;
+  margin-top: 0;
+  padding: 0;
+}
+p{
+  font-size: 1em;
+}
+address{
+  display: inline-block;
+}
+a, a:link, a:active{
+  text-decoration: none;
+  color: #777;
+}
+a:hover, a:focus{
+  color: #29506D;
+}
+.video-container{
+  background-size: cover;
+  background: transparent;
+  display: block;
+  height: 280px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+video{
+  display: block;
+  height: 280px;
+  object-fit: cover;
+  opacity: 0.78;
+  position: absolute;
+  width: 100%;
+}

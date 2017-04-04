@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <title>Portfolio</title>
   <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/icons.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/modules.css">
   <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
@@ -11,6 +16,19 @@
 </head>
 <body>
   <header>
+    <nav class="nav">
+      <ul class="navigation">
+        <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
+        <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+        <li><a href="http://twitter.com/brookr" target="_blank" class="icon-twitter3"> Twitter</a></li>
+        <li><a href="http://github.com/brookr" target="_blank" class="icon-github"> GitHub</a></li>
+      </ul>
+    </nav>
+    <div class="video-container">
+      <video preload="true" autoplay loop muted poster="assets/videoposter.jpeg" class="video-background">
+        <source src="assets/clouds.mp4" type="video/mp4" media="(orientation:landscape)">
+        </video>
+    </div>
     <h1>
       <div class="slidingHorizontal">
         <span>LOUIS</span>
@@ -19,14 +37,24 @@
       </div>
     </h1>
     <h2>Portfolio</h2>
-    <nav>
-    </nav>
   </header>
   <main>
+    <section id="articles">
+      <article class="template" data-category="cat">
+          <div class="byline">
+            By <address><a href="">Author Name</a></address>
+            published <time pubdate datetime="2000-01-01">Publish Time</time>
+          </div>
+        <section class="article-body"></section>
+      </article>
+    </section>
 
   </main>
   <footer>
+    &copy; 2017 Code Fellows | Blog | Louis W. Haywood
   </footer>
+  <script src="scripts/jquery-3.2.0.js"></script>
+  <script src="scripts/data.js"></script>
   <script src="app.js" charset="utf-8"></script>
 </body>
 </html>
