@@ -33,6 +33,11 @@ Topics.prototype.toHtml = function() {
 //   return $newTopic;
 // };
 
+// rawData.sort(function(a,b) {
+// // REVIEW: Take a look at this sort method; This may be the first time we've seen it.
+//   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+// });
+
 rawData.forEach(function(topicObject) {
   // REVIEW: Take a look at this forEach method; This may be the first time we've seen it.
   topics.push(new Article(topicObject));
