@@ -1,6 +1,14 @@
+@media screen and (min-width: 640px){
+}
+
 body{
   background-color: #ece1cb;
   display: inline-block;
+  line-height: 1.5;
+}
+hr{
+  margin: 1em;
+  width: 80%;
 }
 header{
   margin-top: 0;
@@ -44,14 +52,14 @@ a:hover, a:focus{
   background-size: cover;
   background: transparent;
   display: block;
-  height: 280px;
+  height: 180px;
   overflow: hidden;
   position: absolute;
   width: 100%;
 }
 video{
   display: block;
-  height: 280px;
+  height: 180px;
   object-fit: cover;
   opacity: 0.78;
   position: absolute;
