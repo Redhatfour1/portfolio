@@ -22,7 +22,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+.icon-linkedin-square:before {
+  content: "\e900";
+}
 .icon-home:before {
 	content: "\e908";
 }
@@ -67,4 +69,51 @@
 }
 .icon-github:before {
 	content: "\e907";
+}
+/*.icon-linkedin-square:before {
+  content: "\e900";
+}*/
+
+.menu {
+  cursor: pointer;
+	display: inline-block;
+	float: right;
+  margin-left: auto;
+  padding-left: 1.25em;
+  position: relative;
+	height: 2.5em;
+  width: 2.5em;
+
+}
+.menu-global {
+  backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+  border-top: 7px solid white;
+  width: 100%;
+  transition: 0.55s;
+}
+.menu-top {
+  top: 0;
+}
+.menu-middle {
+  top: 18px;
+}
+.menu-bottom {
+  top: 36px;
+}
+.menu-top-click {
+  backface-visibility: hidden;
+  top: 15px;
+  transform: rotate(50deg);
+  transition: 0.55s 0.5s;
+}
+.menu-middle-click {
+  opacity: 0;
+}
+.menu-bottom-click {
+  backface-visibility: hidden;
+  top: 15px;
+  transform: rotate(-410deg);
+  transition: 0.55s 0.5s;
 }

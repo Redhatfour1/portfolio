@@ -1,8 +1,94 @@
+.my-name{
+     font-size: 8.0em;
+     padding-bottom: 0;
+     text-align: center;
+}
+
+.video-container{
+  background-size: cover;
+  background: transparent;
+  display: block;
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+video{
+  display: block;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0.78;
+  position: absolute;
+  width: 100%;
+}
+.background-container{
+  background-image: url('../assets/abstract.jpg');
+  background-size: cover;
+  /*background: transparent;*/
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  /*opacity: 0.1;*/
+  z-index: -1;
+}
+
+main{
+  margin-top: 0;
+}
+h2{
+  /*border-style: dashed;*/
+  color: #614936;
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 7em;
+  font-weight: lighter;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.heading-group-h1 {
+  max-width: 80%;
+}
+
+#filters select {
+  width: 90%;
+  margin: .2em 5%;
+}
+
+/* REVIEW: Add styles so the filters lay out better on desktop. */
+@media only screen and (min-width: 640px) {
+  .heading-group-h1 {
+    padding: .1em .1em .1em 2em;
+    float: none;
+  }
+  #filters select {
+    width: 15em;
+    margin: .2em .2em;
+  }
+    #filters li {
+    width: 20em;
+    display: inline;
+  }
+}
 .slidingHorizontal{
   /*border-style: dashed;*/
 	display: inline;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
   text-indent: 15%;
 }
 .slidingHorizontal span{
@@ -12,6 +98,7 @@
 	color: 	#808080;
 	opacity: 0;
 	overflow: hidden;
+  padding: 0;
 	position: absolute;
 }
 .slidingHorizontal span:nth-child(2){
