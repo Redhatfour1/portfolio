@@ -9,28 +9,33 @@
   <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
-  <link rel="stylesheet" href="styles/linkedin.css">
+  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/c9dacd73bd/UntitledProject/style.css">
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
   <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bilbo" rel="stylesheet">
-  <script id="topic-template" type="text/x-handlebars-template">
-      <article class="clearfix" data-category="{{category}}">
-        <header>
-          <!-- <h1>{{jobTitle}}</h1> -->
-          <div class="byline">
-            By <address><a href="{{category}}">{{category}}</a></address>
-          </div>
-        </header>
-        <section class="topic-body">{{{body}}}</section>
-        <a href="#" class="read-on">Read On &rarr;</a>
+  <script id="template" type="text/x-handlebars-template">
+    <article class="blog-box" data-category="{{myCategory}}">
+
+      <p>{{jobName}}</p>
+      <p>{{jobTitle}}</p>
+      <p>{{jobDiscription}}</p>
+      <p>{{jobAchievments}}</p>
+      <a href ="{{jobUrl}}" target="_blank" class="job-url"></a>
+      <p>{{projectName}}</p>
+      <p>{{projectDiscription}}</p>
+      <a href ="{{projectUrl}}" target="_blank" class="project-url"></a>
+      <p>{{hobby}}</p>
+      <p>{{tvShows}}</p>
+      {{publishStatus}}
+
     </article>
   </script>
 </head>
 <body>
-  <header>
+  <header class="clearfix">
     <nav class="nav">
       <div class="menu">
         <span class="menu-global menu-top"></span>
@@ -39,7 +44,7 @@
       </div>
       <ul class="navigation">
         <li class="tab" data-content="topics"><a href="#" class="icon-home"> Home</a></li>
-        <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+        <li class="tab" data-content="aboutMe"><a href="#" class="icon-address-book"> About</a></li>
         <li><a href="https://www.linkedin.com/in/louiswhaywood/" target="_blank" class="icon-linkedin-square"> LinkedIn</a></li>
         <li><a href="https://github.com/Redhatfour1" target="_blank" class="icon-github"> GitHub</a></li>
       </ul>
@@ -58,47 +63,43 @@
       </h1>
       <h2>Portfolio</h2>
     </header>
-    <main>
-      <section id="topics" class="tab-content">
+    <main class="background-container">
+      <div>
         <div>
-          <ul id="filters">
-            <li>
-              <select id="category-filter">
-                <option value="">-- Filter by Categories --</option>
-              </select>
-            </li>
-            <li>
-              <!-- <select id="category-filter">
-                <option value="">-- Filter by Categories --</option>
-              </select> -->
-            </li>
-          </ul>
+          <section id="aboutMe" class="tab-content">
+            <ul id="filters">
+              <li>
+                <select id="category-filter">
+                  <option value="">-- MY Blog Categories --</option>
+                </select>
+              </li>
+            </ul>
+            <h1 data-category="{{myCategory}}"></h1>
+            <section id="aboutTopics"></section>
+          </div>
+          <section id="topics" class="tab-content">
+            <header>
+              <h1>Welcome to my Blog</h1>
+            </header>
+            <section>
+              <h3>Some of my intrests:</h3>
+              <ul>
+                <li>Coding</li>
+                <li>Sharing what I've learned</li>
+                <li>Hanging with my family</li>
+              </ul>
+            </section>
+          </section>
         </div>
-      </section>
-      <section id="about" class="tab-content">
-        <header>
-          Welcome to my Blog
-        </header>
-      <section>
-        <h1>Some of my intrests:</h1>
-        <ul>
-          <li>Coding</li>
-          <li>Learing new things</li>
-          <li>Hanging with my family</li>
-        </ul>
-      </section>
-    </section>
-
-
-    </main>
-    <footer>
-      &copy; 2017 Code Fellows | Blog | Louis W. Haywood
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-    <script src="scripts/blogData.js"></script>
-    <script src="scripts/hamburger.js"></script>
-    <script src="scripts/app.js" charset="utf-8"></script>
-    <script src="scripts/blogView.js"></script>
-  </body>
-  </html>
+      </main>
+      <footer>
+        &copy; 2017 Code Fellows | Blog | Louis W. Haywood
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+      <script src="scripts/blogData.js" charset="utf-8"></script>
+      <script src="scripts/hamburger.js" charset="utf-8"></script>
+      <script src="scripts/app.js" charset="utf-8"></script>
+      <script src="scripts/blogView.js" charset="utf-8"></script>
+    </body>
+    </html>

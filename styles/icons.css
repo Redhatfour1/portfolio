@@ -22,7 +22,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+.icon-linkedin-square:before {
+  content: "\e900";
+}
 .icon-home:before {
 	content: "\e908";
 }

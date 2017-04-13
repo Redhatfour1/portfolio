@@ -1,10 +1,10 @@
 'use strict';
 
-var topics = [];
+var topicsArray = [];
 
 function Topic (blogDataObj){
-  this.category = blogDataObj.category;
-  this.projects = blogDataObj.projects;
+  this.myCategory = blogDataObj.myCategory;
+  // this.projects = blogDataObj.projects;
   this.tvShows = blogDataObj.tvShows;
   this.hobby = blogDataObj.hobby;
   this.projectName = blogDataObj.projectName;
@@ -18,20 +18,16 @@ function Topic (blogDataObj){
 }
 
 Topic.prototype.toHtml = function(){
-  var templateScript = $('#topic-template').html();
+  var templateScript = $('#template').html();
   var template = Handlebars.compile(templateScript);
 
   return template(this);
 };
 
-// blogData.sort(function(a,b) {
-//   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-// });
-
 blogData.forEach(function(topicObject){
-  topics.push(new Topic(topicObject));
+  topicsArray.push(new Topic(topicObject));
 });
 
-topics.forEach(function(topic){
-  $('#topics').append(topic.toHtml());
+topicsArray.forEach(function(about){
+  $('#aboutTopics').append(about.toHtml());
 });
