@@ -107,7 +107,7 @@
   {
     jobName: 'US Navy',
     jobTitle: 'Operations Specialist',
-    jobDiscription:'Performed problem solving, strategic planning and direct implementation of military operations. Maximized effectiveness of staff by assessing abilities and assigning tasks related to their individual interests. Promoted teamwork in a cooperative environment.</P>',
+    jobDiscription:'Performed problem solving, strategic planning and direct implementation of military operations. Maximized effectiveness of staff by assessing abilities and assigning tasks related to their individual interests. Promoted teamwork in a cooperative environment.',
     jobAchievments:'',
     myCategory: 'Work Experience',
     jobUrl:'https://www.navy.com/about/mission'

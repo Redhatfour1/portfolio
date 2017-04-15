@@ -6,6 +6,12 @@ body{
   display: inline-block;
   line-height: 1.5;
 }
+footer{
+  display: block;
+}
+.misc{
+  display: block;
+}
 hr{
   margin: 1em;
   width: 80%;
@@ -13,7 +19,7 @@ hr{
 header{
   margin-top: 0;
 }
-h1{
+.welcome{
   /*border-style: dashed;*/
   color: #614936;
   display: inline-block;
@@ -23,6 +29,17 @@ h1{
   margin-top: 0;
   margin-left: 10%;
   margin-right: 10%;
+  padding: 0;
+}
+.titleCategory{
+  color: #614936;
+  display: block;
+  font-family: 'Bilbo', cursive;
+  font-size: 10em;
+  font-weight: lighter;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
   padding: 0;
 }
 h2{

@@ -17,6 +17,7 @@ blogView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     console.log('working');
     if ($(this).val()) {
+          $('#titleCategory').text($(this).val());
           $('article.blog-box').hide();
           // $('section.blog-box').fadeIn('slow');
           console.log('article[data-category="'+ $(this).val() + '"]');
@@ -37,18 +38,24 @@ blogView.handleNav = function () {
   $('.nav .tab:first').click();
 };
 
-blogView.handleBackground = function () {
+blogView.removeBackground = function () {
   $('#removeImg').on('click', function() {
-    $('.background-container').css('background-image', 'none');
-    // $('#' + $(this).data('content')).fadeIn();
+    $('main').removeClass('background-container');
   });
-//   $('.background-container .tab:first').click();
+};
+
+blogView.addBackground = function () {
+  $('#addImg').on('click', function() {
+    $('main').addClass('background-container');
+  });
 };
 
 $(document).ready(function() {
 blogView.populateFilters();
 blogView.handleCategoryFilter();
-blogView.handleBackground();
 blogView.handleNav();
+blogView.removeBackground();
+blogView.addBackground();
+blogView.handleTitle();
 // blogView.setTeasers();
 })

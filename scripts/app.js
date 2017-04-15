@@ -29,5 +29,5 @@ blogData.forEach(function(topicObject){
 });
 
 topicsArray.forEach(function(about){
-  $('#aboutTopics').append(about.toHtml());
+  $('#homePage').append(about.toHtml());
 });
