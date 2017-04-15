@@ -38,11 +38,11 @@ blogView.handleNav = function () {
 };
 
 blogView.handleBackground = function () {
-  $('.background-container').on('click', '.tab', function() {
-    $('.background-container').hide();
-    $('#' + $(this).data('content')).fadeIn();
+  $('#removeImg').on('click', function() {
+    $('.background-container').css('background-image', 'none');
+    // $('#' + $(this).data('content')).fadeIn();
   });
-  $('.background-container .tab:first').click();
+//   $('.background-container .tab:first').click();
 };
 
 $(document).ready(function() {

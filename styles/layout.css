@@ -1,4 +1,5 @@
 .my-name{
+     font-family: 'Bilbo', cursive;
      font-size: 8.0em;
      padding-bottom: 0;
      text-align: center;
@@ -95,7 +96,7 @@ h2{
 	animation: leftToRight 12.5s linear infinite 0s;
 	-ms-animation: leftToRight 12.5s linear infinite 0s;
 	-webkit-animation: leftToRight 7.5s linear infinite 0s;
-	color: 	#808080;
+	color: 	#176D88;
 	opacity: 0;
 	overflow: hidden;
   padding: 0;

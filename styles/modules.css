@@ -48,8 +48,19 @@
   padding: .5em .2em;
   border-bottom: 1px solid #ccc;
 }
-
-
+.styled-select blue semi-square{
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+   z-index: 1;
+}
+.blue    { background-color: #5C98AB; }
+.semi-square {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
 @media only screen and (min-width: 640px) {
   .menu {
     display: none;
