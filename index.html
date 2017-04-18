@@ -44,7 +44,7 @@
         <span class="menu-global menu-bottom"></span>
       </div>
       <ul class="navigation">
-        <li class="tab" data-content="topics"><a href="#" class="icon-home"> Home</a></li>
+        <li class="tab" id="addImg" data-content="topics"><a href="#" class="icon-home"> Home</a></li>
         <li class="tab" id="removeImg" data-content="aboutMe"><a href="#" class="icon-address-book"> About</a></li>
         <li><a href="https://www.linkedin.com/in/louiswhaywood/" target="_blank" class="icon-linkedin-square"> LinkedIn</a></li>
         <li><a href="https://github.com/Redhatfour1" target="_blank" class="icon-github"> GitHub</a></li>
@@ -75,14 +75,14 @@
                 </select>
               </li>
             </ul>
-            <h1 data-category="{{myCategory}}"></h1>
-            <section id="aboutTopics"></section>
+            <h1 id="titleCategory" class="titleCategory">Category</h1>
+            <section id="homePage"></section>
           </div>
           <section id="topics" class="tab-content">
             <header>
-              <h1>Welcome to my Blog</h1>
+              <h1 class="welcome">Welcome to my Blog</h1>
             </header>
-            <section>
+            <section class="misc">
               <h3>Some of my intrests:</h3>
               <ul>
                 <li>Coding</li>
@@ -93,7 +93,7 @@
           </section>
         </div>
       </main>
-      <footer>
+      <footer class="foot">
         &copy; 2017 Code Fellows | Blog | Louis W. Haywood
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

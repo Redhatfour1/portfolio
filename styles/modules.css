@@ -2,8 +2,14 @@
   background: #FFEAAA;
 }
 .my-name{
+     color: #614936;
+     display: inline-block;
      font-family: 'Bilbo', cursive;
-     font-size: 8.0em;
+     font-size: 8em;
+     font-weight: lighter;
+     margin-top: 0;
+     margin-left: 10%;
+     margin-right: 10%;
      padding-bottom: 0;
      text-align: center;
 }
