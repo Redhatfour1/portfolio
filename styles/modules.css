@@ -87,10 +87,16 @@
     display: inline;
     border-bottom: none;
   }
-  .nav ul li:hover a {
-    color: #614936;
-    font-family: 'Bilbo', cursive;
-  }
+  .nav ul li:hover a.icon {
+      color: #614936;
+    }
+    .nav ul li a.navi {
+      font-family: 'icomoon';
+    }
+    .nav ul li:hover a.navi {
+      color: #614936;
+      font-family: 'Bilbo', cursive;
+    }
   .slidingHorizontal{
     display: block;
   }
