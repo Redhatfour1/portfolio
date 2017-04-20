@@ -5,7 +5,7 @@
      color: #614936;
      display: inline-block;
      font-family: 'Bilbo', cursive;
-     font-size: 8em;
+     font-size: 4em;
      font-weight: lighter;
      margin-top: 0;
      margin-left: 10%;
@@ -114,6 +114,60 @@
     #filters li {
     width: 20em;
     display: inline;
+  }
+  .my-name{
+    color: #614936;
+    display: inline-block;
+    font-family: 'Bilbo', cursive;
+    font-size: 8em;
+    font-weight: lighter;
+    margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  h2{
+    /*border-style: dashed;*/
+    color: #614936;
+    font-family: 'Lovers Quarrel', cursive;
+    font-size: 7em;
+    font-weight: lighter;
+    display: block;
+    margin-top: 0;
+    padding: 0;
+  }
+  .welcome{
+    /*border-style: dashed;*/
+    color: #614936;
+    display: inline-block;
+    font-family: 'Bilbo', cursive;
+    font-size: 10em;
+    font-weight: lighter;
+    margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+  }
+.video-container{
+    background-size: cover;
+    background: transparent;
+    display: block;
+    height: 180px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  .background-container{
+    background-image: url('../assets/abstract.jpg');
+    background-size: cover;
+    /*background: transparent;*/
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    /*opacity: 0.1;*/
+    z-index: -1;
   }
 }
 .slidingHorizontal{

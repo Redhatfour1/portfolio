@@ -1,11 +1,11 @@
 'use strict';
 
-var blogView = {};
+const blogView = {};
 
 blogView.populateFilters = function(){
   $('section').find('.blog-box').each(function(){
-      var myCategory = $(this).attr('data-category');
-      var optionTag = '<option value="' + myCategory + '">' + myCategory + '</option>';
+      let myCategory = $(this).attr('data-category');
+      let optionTag = '<option value="' + myCategory + '">' + myCategory + '</option>';
 
       if ($('#category-filter option[value="' + myCategory + '"]').length === 0) {
         $('#category-filter').append(optionTag);
@@ -49,6 +49,50 @@ blogView.addBackground = function () {
     $('main').addClass('background-container');
   });
 };
+
+blogView.initNewTopicPage = function() {
+  $('.tab-content').show();
+  $('#export-field').hide();
+  $('#article-json').on('focus', function(){
+    this.select();
+  });
+
+  $('#new-form').on('change', 'input, textarea', blogView.create);
+};
+
+blogView.create = function() {
+  let article;
+  $('#articles').empty();
+
+  topic = new Topic({
+    myCategory: $('#about-myCategory').val(),
+    tvShows: $('#about-tvShows').val(),
+    hobby: $('#about-hobby').val(),
+    projectName: $('#about-projectName').val(),
+    projectUrl: $('#about-project-url').val(),
+    projectDiscription: $('#about-projectDescription').val(),
+    jobName: $('#about-companyName').val(),
+    jobTitle: $('#about-jobTitle').val(),
+    jobDiscription: $('#about-jobDescription').val(),
+    jobAchievments: $('#about-jobAchievements').val(),
+    jobUrl: $('#about-job-url').val(),
+
+  });
+
+  $('#aboutMe').append(article.toHtml());
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
+  $('#export-field').show();
+  $('#template-json').val(`${JSON.stringify(article)},`);
+};
+
+
+blogView.initIndexPage = function() {
+  Topic.all.forEach(function(article) {
+    $('#aboutMe').append(article.toHtml())
+  });
 
 $(document).ready(function() {
 blogView.populateFilters();
