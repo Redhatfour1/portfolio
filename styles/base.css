@@ -8,6 +8,7 @@ body{
 }
 footer{
   display: block;
+  z-index: 2;
 }
 .misc{
   display: block;
@@ -18,13 +19,14 @@ hr{
 }
 header{
   margin-top: 0;
+  margin-bottom: 0;
 }
 .welcome{
   /*border-style: dashed;*/
   color: #614936;
   display: inline-block;
   font-family: 'Bilbo', cursive;
-  font-size: 10em;
+  font-size: 4em;
   font-weight: lighter;
   margin-top: 0;
   margin-left: 10%;
@@ -40,16 +42,6 @@ header{
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
-  padding: 0;
-}
-h2{
-  /*border-style: dashed;*/
-  color: #614936;
-  font-family: 'Lovers Quarrel', cursive;
-  font-size: 7em;
-  font-weight: lighter;
-  display: block;
-  margin-top: 0;
   padding: 0;
 }
 p{

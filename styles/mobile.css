@@ -1,0 +1,55 @@
+/*@media only screen and (min-width: 640px) {
+  .menu {
+    display: none;
+  }
+  .nav {
+    padding: .2em .2em .2em 2em;
+  }
+  .nav ul {
+    display: block;
+  }
+  .nav ul li {
+    display: inline;
+    border-bottom: none;
+  }
+  .nav ul li:hover a.icon {
+    color: #614936;
+  }
+  .nav ul li a.navi {
+    font-family: 'icomoon';
+  }
+  .nav ul li:hover a.navi {
+    color: #614936;
+    font-family: 'Bilbo', cursive;
+  }
+  .slidingHorizontal{
+    display: block;
+  }
+  .slidingHorizontal span{
+    display: block;
+  }
+  .heading-group-h1 {
+    padding: .1em .1em .1em 2em;
+    float: none;
+  }
+  #filters select {
+    width: 15em;
+    margin: .2em .2em;
+  }
+  #filters li {
+    width: 20em;
+    display: inline;
+  }
+  .my-name{
+    color: #614936;
+    display: inline-block;
+    font-family: 'Bilbo', cursive;
+    font-size: 2em;
+    font-weight: lighter;
+    margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 0;
+    text-align: center;
+  }
+}*/

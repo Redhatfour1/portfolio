@@ -1,15 +1,15 @@
 'use strict';
 
-var blogView = {};
+const blogView = {};
 
 blogView.populateFilters = function(){
   $('section').find('.blog-box').each(function(){
-      var myCategory = $(this).attr('data-category');
-      var optionTag = '<option value="' + myCategory + '">' + myCategory + '</option>';
+    let myCategory = $(this).attr('data-category');
+    let optionTag = '<option value="' + myCategory + '">' + myCategory + '</option>';
 
-      if ($('#category-filter option[value="' + myCategory + '"]').length === 0) {
-        $('#category-filter').append(optionTag);
-      }
+    if ($('#category-filter option[value="' + myCategory + '"]').length === 0) {
+      $('#category-filter').append(optionTag);
+    }
   });
 };
 
@@ -17,18 +17,18 @@ blogView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     console.log('working');
     if ($(this).val()) {
-          $('#titleCategory').text($(this).val());
-          $('article.blog-box').hide();
-          // $('section.blog-box').fadeIn('slow');
-          console.log('article[data-category="'+ $(this).val() + '"]');
-          $('article[data-category="'+ $(this).val() + '"]').fadeIn();
-        } else {
-          $('article.blog-box').fadeIn();
-          $('script.template').hide();
-        }
-        $('#category-filter').val('');
-      });
-    };
+      $('#titleCategory').text($(this).val());
+      $('article.blog-box').hide();
+      // $('section.blog-box').fadeIn('slow');
+      console.log('article[data-category="'+ $(this).val() + '"]');
+      $('article[data-category="'+ $(this).val() + '"]').fadeIn();
+    } else {
+      $('article.blog-box').fadeIn();
+      $('script.template').hide();
+    }
+    $('#category-filter').val('');
+  });
+};
 
 blogView.handleNav = function () {
   $('.nav').on('click', '.tab', function() {
@@ -50,12 +50,16 @@ blogView.addBackground = function () {
   });
 };
 
-$(document).ready(function() {
-blogView.populateFilters();
-blogView.handleCategoryFilter();
-blogView.handleNav();
-blogView.removeBackground();
-blogView.addBackground();
-blogView.handleTitle();
-// blogView.setTeasers();
-})
+blogView.initIndexPage = function() {
+  Topic.all.forEach(function(about) {
+    $('#homePage').append(about.toHtml())
+  });
+console.log('working');
+
+  blogView.populateFilters();
+  blogView.handleCategoryFilter();
+  blogView.handleNav();
+  blogView.removeBackground();
+  blogView.addBackground();
+  blogView.handleTitle();
+};
