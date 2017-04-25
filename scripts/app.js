@@ -1,7 +1,5 @@
 'use strict';
 
-var topicsArray = [];
-
 function Topic (blogDataObj){
   this.myCategory = blogDataObj.myCategory;
   // this.projects = blogDataObj.projects;
@@ -17,6 +15,8 @@ function Topic (blogDataObj){
   this.jobUrl = blogDataObj.jobUrl;
 }
 
+Topic.all = [];
+
 Topic.prototype.toHtml = function(){
   var templateScript = $('#template').html();
   var template = Handlebars.compile(templateScript);
@@ -24,13 +24,9 @@ Topic.prototype.toHtml = function(){
   return template(this);
 };
 Topic.loadAll = function(blogData) {
-  blogData.sort(function(a,b) {
-    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-  });
-
   blogData.forEach(function(ele) {
     Topic.all.push(new Topic(ele));
-  })
+  });
 }
 // This function will retrieve the data from either a local or remote source,
 // and process it, then hand off control to the View.
@@ -49,7 +45,7 @@ Topic.fetchAll = function() {
     // then load all the data into Article.all with the .loadAll function above,
     // and then render the index page.
     $(()=> {
-      $.ajax({url: '/data/hackerIpsum.json'})
+      $.ajax({url: '/data/blogData.json'})
       .done(function(data) {
         localStorage.setItem('blogData', JSON.stringify(data));
         Topic.loadAll(JSON.parse(localStorage.blogData));
@@ -63,6 +59,6 @@ Topic.fetchAll = function() {
 //   topicsArray.push(new Topic(topicObject));
 // });
 //
-// topicsArray.forEach(function(about){
+// Topic.allforEach(function(about){
 //   $('#homePage').append(about.toHtml());
 // });
