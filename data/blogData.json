@@ -1,59 +1,59 @@
 [
   {
    "tvShows": "Broadwalk Empire",
-   "myCategory": "Favorite Tv Shows",
+   "myCategory": "Favorite Tv Shows"
   },
   {
    "tvShows": "Pillars of Earth",
-   "myCategory": "Favorite Tv Shows",
+   "myCategory": "Favorite Tv Shows"
   },
   {
    "tvShows": "Rome",
-   "myCategory": "Favorite Tv Shows",
+   "myCategory": "Favorite Tv Shows"
   },
   {
    "tvShows": "Silicon Valley",
-   "myCategory": "Favorite Tv Shows",
+   "myCategory": "Favorite Tv Shows"
   },
   {
    "tvShows": "Game of Thrones",
-   "myCategory": "Favorite Tv Shows",
+   "myCategory": "Favorite Tv Shows"
   },
   {
    "tvShows": "Magicians",
-   "myCategory": "Favorite Tv Shows",
+   "myCategory": "Favorite Tv Shows"
   },
   {
    "tvShows": "Walkin Dead",
-   "myCategory": "Favorite Tv Shows",
+   "myCategory": "Favorite Tv Shows"
   },
   {
    "tvShows": "Voice",
-   "myCategory": "Favorite Tv Shows",
+   "myCategory": "Favorite Tv Shows"
   },
   {
    "tvShows": "Breaking BAd",
-   "myCategory": "Favorite Tv Shows",
+   "myCategory": "Favorite Tv Shows"
   },
   {
    "hobby": "Hiking",
-   "myCategory": "Hobbies",
+   "myCategory": "Hobbies"
   },
   {
    "hobby": "Basketball",
-   "myCategory": "Hobbies",
+   "myCategory": "Hobbies"
   },
   {
    "hobby": "Crossfit",
-   "myCategory": "Hobbies",
+   "myCategory": "Hobbies"
   },
   {
    "hobby": "Anime",
-   "myCategory": "Hobbies",
+   "myCategory": "Hobbies"
   },
   {
    "hobby": "TV Shows",
-   "myCategory": "Hobbies",
+   "myCategory": "Hobbies"
   },
   {
     "projectName": "Cocktail Generator",
@@ -77,7 +77,7 @@
     "projectName": "Guessing Game",
     "projectUrl": "",
     "projectDescription": "",
-    "myCategory": "Projects",
+    "myCategory": "Projects"
   },
   {
     "jobName": "A&R Solar",
@@ -109,5 +109,5 @@
     "jobAchievements":"",
     "myCategory": "Work Experience",
     "jobUrl":"https://www.navy.com/about/mission"
-  },
-];
+  }
+]

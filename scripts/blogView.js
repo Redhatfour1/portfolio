@@ -10,6 +10,8 @@ blogView.populateFilters = function(){
     if ($('#category-filter option[value="' + myCategory + '"]').length === 0) {
       $('#category-filter').append(optionTag);
     }
+    // myCategory = $(this).attr('data-category');
+    // optionTag = `<option value="${val}">${val}</option>`;
   });
 };
 
@@ -61,5 +63,5 @@ console.log('working');
   blogView.handleNav();
   blogView.removeBackground();
   blogView.addBackground();
-  blogView.handleTitle();
+  // blogView.handleTitle();
 };

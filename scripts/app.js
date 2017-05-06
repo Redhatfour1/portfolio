@@ -31,10 +31,12 @@ Topic.loadAll = function(blogData) {
 // This function will retrieve the data from either a local or remote source,
 // and process it, then hand off control to the View.
 Topic.fetchAll = function() {
+  // console.log('from fetchAll');
   if (localStorage.blogData) {
     // When rawData is already in localStorage,
     // we can load it with the .loadAll function above,
     // and then render the index page (using the proper method on the articleView object).
+// console.log('fetchAll if');
     Topic.loadAll(JSON.parse(localStorage.blogData)); //What do we pass in to loadAll()?
     blogView.initIndexPage();
     //What method do we call to render the index page?
@@ -45,6 +47,7 @@ Topic.fetchAll = function() {
     // then load all the data into Article.all with the .loadAll function above,
     // and then render the index page.
     $(()=> {
+    // console.log('from else');
       $.ajax({url: '/data/blogData.json'})
       .done(function(data) {
         localStorage.setItem('blogData', JSON.stringify(data));
