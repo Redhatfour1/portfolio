@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/icons.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/modules.css">
+  <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/c9dacd73bd/UntitledProject/style.css"> -->
+  <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bilbo" rel="stylesheet">
+  <script id="template" type="text/x-handlebars-template">
+    <article class="blog-box" data-category="{{myCategory}}">
+
+      <p>{{jobName}}</p>
+      <p>{{jobTitle}}</p>
+      <p>{{jobDiscription}}</p>
+      <p>{{jobAchievments}}</p>
+      <a href ="{{jobUrl}}" target="_blank" class="job-url"></a>
+      <p>{{projectName}}</p>
+      <p>{{projectDiscription}}</p>
+      <a href ="{{projectUrl}}" target="_blank" class="project-url"></a>
+      <p>{{hobby}}</p>
+      <p>{{tvShows}}</p>
+      {{publishStatus}}
+
+    </article>
+  </script>
+</head>
+<body>
+  <header class="clearfix">
+    <nav class="nav">
+      <div class="menu">
+        <span class="menu-global menu-top"></span>
+        <span class="menu-global menu-middle"></span>
+        <span class="menu-global menu-bottom"></span>
+      </div>
+      <ul class="navigation">
+        <li class="tab" id="addImg" data-content="topics"><a href="#" class="icon icon-home"></a><a href="#" class="navi">Home</a></li>
+        <li class="tab" id="removeImg" data-content="aboutMe"><a href="#" class="icon icon-address-book"></a><a href="#" class="navi">About</a></li>
+        <li><a href="https://www.linkedin.com/in/louiswhaywood/" target="_blank" class="icon icon-linkedin-square"></a><a href="#" class="navi">LinkedIn</a></li>
+        <li><a href="https://github.com/Redhatfour1" target="_blank" class="icon icon-github"></a><a href="#" class="navi">GitHub</a></li>
+      </ul>
+    </nav>
+    <div class="video-container">
+      <video preload="true" autoplay loop muted class="video-background">
+        <source src="assets/clouds.mp4" type="video/mp4" media="(orientation:landscape)">
+        </video>
+      </div>
+      <h1 class="my-name">
+        <div class="slidingHorizontal">
+          <span>LOUIS</span>
+          <span>WARREN</span>
+          <span>HAYWOOD</span>
+        </div>
+      </h1>
+      <h2>Portfolio</h2>
+    </header>
+    <main class="background-container">
+      <div>
+        <div>
+          <section id="aboutMe" class="tab-content">
+            <ul id="filters">
+              <li>
+                <select id="category-filter" class="styled-select blue semi-square">
+                  <option value="">-- MY Blog Categories --</option>
+                </select>
+              </li>
+            </ul>
+            <h1 id="titleCategory" class="titleCategory">Category</h1>
+            <section id="homePage"></section>
+          </div>
+          <section id="topics" class="tab-content">
+            <header>
+              <h1 class="welcome">Welcome to my Blog</h1>
+            </header>
+            <section class="misc">
+              <h3>Some of my intrests:</h3>
+              <ul>
+                <li>Coding</li>
+                <li>Sharing what I've learned</li>
+                <li>Hanging with my family</li>
+              </ul>
+            </section>
+          </section>
+        </div>
+      </main>
+      <footer class="foot">
+        &copy; 2017 Code Fellows | Blog | Louis W. Haywood
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="vendor/scripts/handlebars.js"></script>
+      <script src="vendor/scripts/marked.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+      <script src="scripts/hamburger.js" charset="utf-8"></script>
+      <script src="scripts/topic.js" charset="utf-8"></script>
+      <script src="scripts/blogView.js" charset="utf-8"></script>
+      <script>
+      Topic.fetchAll();
+      blogView.initIndexPage();
+      </script>
+    </body>
+    </html>
