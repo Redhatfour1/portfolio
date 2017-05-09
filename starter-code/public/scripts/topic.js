@@ -1,4 +1,5 @@
 'use strict';
+(function(module){
 
 function Topic (blogDataObj){
   this.myCategory = blogDataObj.myCategory;
@@ -13,6 +14,7 @@ function Topic (blogDataObj){
   this.jobDescription = blogDataObj.jobDescription;
   this.jobAchievements = blogDataObj.jobAchievements;
   this.jobUrl = blogDataObj.jobUrl;
+  this.numOfWords = blogDataObj.numOfWords;
 }
 
 Topic.all = [];
@@ -57,6 +59,12 @@ Topic.fetchAll = function() {
     });
   }
 }
+Topic.numOfWordsAll = () => {
+  return Topic.all.map(topic
+  => topic.split('').length).reduce((acc, numOfWords)=>acc + numOfWords);
+};
+
+})(window);
 
 // blogData.forEach(function(topicObject){
 //   topicsArray.push(new Topic(topicObject));
