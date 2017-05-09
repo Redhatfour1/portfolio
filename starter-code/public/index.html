@@ -28,8 +28,8 @@
       <a href ="{{projectUrl}}" target="_blank" class="project-url"></a>
       <p>{{hobby}}</p>
       <p>{{tvShows}}</p>
+      <p>{{numOfWords}}</p>
       {{publishStatus}}
-      <li>{{numOfWords}} Word Count</li>
 
     </article>
   </script>
@@ -76,6 +76,7 @@
             </ul>
             <h1 id="titleCategory" class="titleCategory">Category</h1>
             <section id="homePage"></section>
+            <h6 class="words">Total number of words:</h6>
           </div>
           <section id="topics" class="tab-content">
             <header>
@@ -93,7 +94,6 @@
         </div>
       </main>
       <footer class="foot">
-        <h6 class="words">Total number of words:</h6>
         &copy; 2017 Code Fellows | Blog | Louis W. Haywood
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -104,8 +104,7 @@
       <script src="scripts/topic.js" charset="utf-8"></script>
       <script src="scripts/blogView.js" charset="utf-8"></script>
       <script>
-      Topic.fetchAll();
-      blogView.initIndexPage();
+        window.Topic.fetchAll();
       </script>
     </body>
     </html>
