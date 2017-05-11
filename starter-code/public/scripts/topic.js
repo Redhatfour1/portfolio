@@ -33,11 +33,13 @@
   // This function will retrieve the data from either a local or remote source,
   // and process it, then hand off control to the View.
   Topic.numOfWordsAll = () => {
-    return Topic.all.map(topic => topic.split(' ').length).reduce((acc,
-    words) => {
+    return Topic.all.map((topics) => {
+      console.log('topics');
+      var count = topics.myCategory.split(' ');
+      return count.length;
+    }).reduce((acc, words) => {
       return acc + words;
-  },0)
-  console.log('words');
+  })
 };
 
 
