@@ -28,6 +28,7 @@
       <a href ="{{projectUrl}}" target="_blank" class="project-url"></a>
       <p>{{hobby}}</p>
       <p>{{tvShows}}</p>
+      <p>{{numOfWords}}</p>
       {{publishStatus}}
 
     </article>
@@ -75,7 +76,14 @@
             </ul>
             <h1 id="titleCategory" class="titleCategory">Category</h1>
             <section id="homePage"></section>
+            <section>
+            <dt>Total number of words:</dt> <dd id="words"></dd>
+            </section>
           </div>
+          <!-- <section id="projectstodom" class="projectstodom"></section>
+      <section id="projectStats" >
+        <dt class="wordCount">Description Word Count:</dt><dd class="words wordCount"></dd>
+      </section> -->
           <section id="topics" class="tab-content">
             <header>
               <h1 class="welcome">Welcome to my Blog</h1>
@@ -102,8 +110,7 @@
       <script src="scripts/topic.js" charset="utf-8"></script>
       <script src="scripts/blogView.js" charset="utf-8"></script>
       <script>
-      Topic.fetchAll();
-      blogView.initIndexPage();
+        window.Topic.fetchAll(window.blogView.initIndexPage);
       </script>
     </body>
     </html>
