@@ -43,10 +43,10 @@
         <span class="menu-global menu-bottom"></span>
       </div>
       <ul class="navigation">
-        <li class="tab" id="addImg" data-content="topics"><a href="#" class="icon icon-home"></a><a href="#" class="navi">Home</a></li>
-        <li class="tab" id="removeImg" data-content="aboutMe"><a href="#" class="icon icon-address-book"></a><a href="#" class="navi">About</a></li>
-        <li><a href="https://www.linkedin.com/in/louiswhaywood/" target="_blank" class="icon icon-linkedin-square"></a><a href="#" class="navi">LinkedIn</a></li>
-        <li><a href="https://github.com/Redhatfour1" target="_blank" class="icon icon-github"></a><a href="#" class="navi">GitHub</a></li>
+        <li class="tab" id="addImg" data-content="topics"><a href="/" class="icon icon-home navi">Home</a></li>
+        <li class="tab" id="removeImg" data-content="aboutMe"><a href="/about" class="icon icon-address-book navi">About</a></li>
+        <li><a href="https://www.linkedin.com/in/louiswhaywood/" target="_blank" class="icon icon-linkedin-square navi">LinkedIn</a></li>
+        <li><a href="https://github.com/Redhatfour1" target="_blank" class="icon icon-github  navi">GitHub</a></li>
       </ul>
     </nav>
     <div class="video-container">
@@ -74,6 +74,7 @@
                 </select>
               </li>
             </ul>
+            <ul></ul>
             <h1 id="titleCategory" class="titleCategory">Category</h1>
             <section id="homePage"></section>
             <section>
@@ -103,14 +104,23 @@
         &copy; 2017 Code Fellows | Blog | Louis W. Haywood
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script src="vendor/scripts/handlebars.js"></script>
-      <script src="vendor/scripts/marked.js"></script>
+      <script src="/vendor/scripts/handlebars.js"></script>
+      <script src="/vendor/scripts/marked.js"></script>
+      <script src="/vendor/scripts/highlight.pack.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-      <script src="scripts/hamburger.js" charset="utf-8"></script>
-      <script src="scripts/topic.js" charset="utf-8"></script>
-      <script src="scripts/blogView.js" charset="utf-8"></script>
+      <script src="/vendor/scripts/hamburger.js" charset="utf-8"></script>
+      <script src="/vendor/scripts/page.js"></script>
+      <script src="/scripts/token.js"></script>
+      <!-- <script src="/githubToken.js"></script> -->
+      <script src="/scripts/models/topic.js" charset="utf-8"></script>
+      <script src="/scripts/views/blogView.js" charset="utf-8"></script>
+      <script src="/scripts/controllers/aboutController.js"></script>
+      <script src="/scripts/controllers/topicController.js"></script>
+      <script src="/scripts/models/repo.js"></script>
+      <script src="/scripts/views/repoView.js"></script>
+      <script src="/scripts/controllers/routes.js"></script>
       <script>
-        window.Topic.fetchAll(window.blogView.initIndexPage);
+        // window.Topic.fetchAll(window.blogView.initIndexPage);
       </script>
     </body>
     </html>

@@ -2,7 +2,7 @@
 
 (function(module) {
   var blogView = {};
-  module.blogView = blogView;
+
   blogView.populateFilters = function(){
     $('section').find('.blog-box').each(function(){
       let myCategory = $(this).attr('data-category');
@@ -58,11 +58,11 @@
       });
       console.log('working');
 
-      // blogView.numOfWordsAll();
       blogView.populateFilters();
       blogView.handleCategoryFilter();
       blogView.handleNav();
       blogView.removeBackground();
       blogView.addBackground();
     };
+    module.blogView = blogView;
   })(window);
