@@ -9,7 +9,9 @@
   topicController.index = () => {
     window.Topic.fetchAll();
     $('#aboutMe').hide();
-    $('#topics').fadeIn('slow');
+    $('#repos').hide();
+    $('#removeImg').show();
+    $('#repo-tab').show();
   };
   module.topicController = topicController;
 })(window);

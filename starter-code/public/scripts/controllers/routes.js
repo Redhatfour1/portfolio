@@ -5,5 +5,7 @@
 // page.base('');
 page('/', window.topicController.index);
 page('/about', window.aboutController.index);
+page('/repos', window.reposController.index);
+
 // This function call will activate page.js? Fire it off now, to execute
 page();

@@ -33,6 +33,20 @@
 
     </article>
   </script>
+  <script id="repoTemplate" type="text/x-handlebars-template">
+    <article class="repos-box">
+      <a href="{{html_url}}" target="_blank">
+        <h3 class="repoTitle">{{name}}</h3>
+      </a>
+        <p>{{id}}</p>
+        <p>{{description}}</p>
+        <p>{{language}}</p>
+        <p>{{created_at}}</p>
+        <p>{{updated_at}}</p>
+        {{#if watchers_count}}
+        <p>{{watchers_count}} watching this repo.</p>
+    </article>
+  </script>
 </head>
 <body>
   <header class="clearfix">
@@ -45,6 +59,7 @@
       <ul class="navigation">
         <li class="tab" id="addImg" data-content="topics"><a href="/" class="icon icon-home navi">Home</a></li>
         <li class="tab" id="removeImg" data-content="aboutMe"><a href="/about" class="icon icon-address-book navi">About</a></li>
+        <li class="tab" id="repo-tab" data-content="repos"><a href="/repos" class="icon icon-address-book navi">Repos</a></li>
         <li><a href="https://www.linkedin.com/in/louiswhaywood/" target="_blank" class="icon icon-linkedin-square navi">LinkedIn</a></li>
         <li><a href="https://github.com/Redhatfour1" target="_blank" class="icon icon-github  navi">GitHub</a></li>
       </ul>
@@ -78,26 +93,32 @@
             <h1 id="titleCategory" class="titleCategory">Category</h1>
             <section id="homePage"></section>
             <section>
-            <dt>Total number of words:</dt> <dd id="words"></dd>
+              <dt>Total number of words:</dt> <dd id="words"></dd>
             </section>
           </div>
           <!-- <section id="projectstodom" class="projectstodom"></section>
-      <section id="projectStats" >
-        <dt class="wordCount">Description Word Count:</dt><dd class="words wordCount"></dd>
-      </section> -->
-          <section id="topics" class="tab-content">
-            <header>
-              <h1 class="welcome">Welcome to my Blog</h1>
-            </header>
-            <section class="misc">
-              <h3>Some of my intrests:</h3>
-              <ul>
-                <li>Coding</li>
-                <li>Sharing what I've learned</li>
-                <li>Hanging with my family</li>
-              </ul>
-            </section>
+          <section id="projectStats" >
+          <dt class="wordCount">Description Word Count:</dt><dd class="words wordCount"></dd>
+        </section> -->
+        <section id="topics" class="tab-content">
+          <header>
+            <h1 class="welcome">Welcome to my Blog</h1>
+          </header>
+          <section class="misc">
+            <h3>Some of my intrests:</h3>
+            <ul>
+              <li>Coding</li>
+              <li>Sharing what I've learned</li>
+              <li>Hanging with my family</li>
+            </ul>
           </section>
+        </section>
+        <section class="tab-content" id="repos">
+          <h1 class="repoTitle">GitHub Repositories:</h1>
+          <!-- <section class="repoList"> -->
+            <ul id="reposUl"></ul>
+          <!-- </section> -->
+        </section>
         </div>
       </main>
       <footer class="foot">
@@ -116,11 +137,12 @@
       <script src="/scripts/views/blogView.js" charset="utf-8"></script>
       <script src="/scripts/controllers/aboutController.js"></script>
       <script src="/scripts/controllers/topicController.js"></script>
+      <script src="/scripts/controllers/reposController.js"></script>
       <script src="/scripts/models/repo.js"></script>
       <script src="/scripts/views/repoView.js"></script>
       <script src="/scripts/controllers/routes.js"></script>
       <script>
-        // window.Topic.fetchAll(window.blogView.initIndexPage);
+      // window.Topic.fetchAll(window.blogView.initIndexPage);
       </script>
     </body>
     </html>

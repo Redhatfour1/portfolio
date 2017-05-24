@@ -4,9 +4,11 @@
   const aboutController = {};
   aboutController.index = () => {
     $('#removeImg').hide();
-    $('#aboutMe').fadeIn('slow');
+    $('#repos').hide();
+    $('#aboutMe').show();
+    $('#repo-tab').show();
 
-    repos.requestRepos(repoView.index);
+    // repos.requestRepos(repoView.index);
   };
   module.aboutController = aboutController;
 })(window);
