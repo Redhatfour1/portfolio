@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "description": "portfolio for 301n7 ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Redhatfour1/portfolio"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "louis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Redhatfour1/portfolio"
+  },
+  "homepage": "https://github.com/Redhatfour1/portfolio",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.2",
+    "express-request-proxy": "^2.0.0",
+    "pg": "^6.2.2"
+  }
+}
